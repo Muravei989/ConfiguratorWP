@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wärmepumpe Configurator</title>
+  <link rel="stylesheet" href="form.css">
+  <script type="text/javascript" src="form-handler.js" defer></script>
+
+</head>
+<body>
+<form action="/download-pdf" method="GET">
+  <fieldset>
+    <legend>Über die Heizlast</legend>
+    <label for="heizlast">Heizlastwert:</label>
+    <input type="number" id="heizlast" name="heizlast" min="0" max="25" oninput="toggleQuestions()"><br>
+
+    <div id="durchgef" style="display: none;">
+      <p>Kann eine Heizlastung durchgeführt werden?</p>
+      <label><input type="radio" id="durchgefja" name="dgmöglichkeit" value="Yes"> Ja</label>
+      <label><input type="radio" id="durchgefne" name="dgmöglichkeit" value="No" onclick="showRadioGroup2()"> Nein</label>
+    </div>
+
+    <div id="radioGroup2" style="display: none;">
+      <p>Kann eine hinreichend genaue Abschätzung der Heizlast vorgenommen werden?</p>
+      <label><input type="radio" id="hinreichenja" name="hrmöglichkeit" value="Yes" onclick="toggleSubmitButton()"> Ja</label>
+      <label><input type="radio" id="hinreichenne" name="hrmöglichkeit" value="No" onclick="toggleSubmitButton()"> Nein</label>
+    </div>
+
+    <div>
+      <input type="submit" value="Angebot für eine technische Untersuchung" id="submitButton" style="display: none;">
+    </div>
+
+    <div id="eheizstab" style="display: none;">
+      <p>Kann die Heizlast in Verbindung mit einem E-Heizstab abgedeckt werden?</p>
+      <label><input type="radio" id="eheizstabja" name="eheizstabmöglichkeit" value="Yes" onclick="toggleSubmitButton()"> Ja</label>
+      <label><input type="radio" id="eheizstabne" name="eheizstabmöglichkeit" value="No" onclick="toggleSubmitButton()"> Nein</label>
+    </div>
+
+    <div id="scheitholz" style="display: none;">
+      <p>Kann die Heizlast in Verbindung mit einem SCHEITHOLZ abgedeckt werden?</p>
+      <label><input type="radio" id="scheitholzja" name="scheitholzmöglichkeit" value="Yes" onclick="toggleSubmitButton()"> Ja</label>
+      <label><input type="radio" id="scheitholzne" name="scheitholzmöglichkeit" value="No" onclick="toggleSubmitButton()"> Nein</label>
+    </div>
+
+
+  </fieldset>
+</form>
+</body>
+</html>
