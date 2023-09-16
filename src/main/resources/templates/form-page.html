@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../static/styles/form-page.css">
 </head>
 <body>
 <form action="/submit" method="post">
-    <label for="heatLoad">Heat Load</label>
-    <input type="number" name="heatLoad" id="heatLoad">
-    <br>
-    <label for="isEblan">TI EBLAN?</label>
-    <select name="isEblan" id="isEblan">
-        <option value="da">DA</option>
-        <option value="nein">NEIN</option>
-    </select>
-    <br>
+    <div class="heatLoadBox">
+        <label for="heatLoad">Heat Load</label>
+        <input type="number" name="heatLoad" id="heatLoad">
+        <br>
+    </div>
+
+    <div class="isEblanBox">
+        <label for="isEblan">TI EBLAN?</label>
+        <select name="isEblan" id="isEblan">
+            <option value="da">DA</option>
+            <option value="nein">NEIN</option>
+        </select>
+        <br>
+    </div>
+
     <button type="submit">SUBMIT</button>
 
 </form>
