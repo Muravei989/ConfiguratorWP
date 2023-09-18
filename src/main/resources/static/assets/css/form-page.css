@@ -1,3 +1,4 @@
+html,body{overflow-y: scroll; }
 body
 {background: gold;
     border: 10px solid #ffdd26;
@@ -37,4 +38,8 @@ button{
 
 button:hover
 {background: #dcd9d9
+}
+
+.hidden{
+    display: none;
 }

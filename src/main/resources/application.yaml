@@ -2,5 +2,3 @@ templatePath: docTemplates
 spring:
   profiles:
     active: "TextOut"
-  mvc:
-    static-path-pattern: "/docTemplates/**"
