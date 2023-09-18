@@ -8,21 +8,21 @@
 <body>
 <form action="/submit" method="post">
     <div class="heatLoadBox">
-        <label for="heatLoad">Heizlast</label>
+        <label for="heatLoad">Heizlast (Wenn Sie den Wert nicht kennen, geben Sie 0 ein)</label>
         <br>
-        <input type="number" name="heatLoad" id="heatLoad">
+        <input type="number" name="heatLoad" id="heatLoad" min="0" max="50">
         <hr>
     </div>
 
     <div class="distancetoboardBox">
         <label for="distancetoboard">"Geben Sie die Entfernung von der Anlage bis zum Eingang des Technikraums an</label>
         <br>
-        <input type="number" name="distancetoboard" id="distancetoboard">
+        <input type="number" name="distancetoboard" id="distancetoboard" min="4" max="15">
         <hr>
     </div>
 
     <div class="eheaterBox">
-        <label for="eheater">Kann die Heizlast in Verbindung mit einem E-Heizstab abgedeckt werden (max. Untdeckung der WP 30%?</label>
+        <label for="eheater">Kann die Heizlast in Verbindung mit einem E-Heizstab abgedeckt werden (max. Untdeckung der WP 30%)?</label>
         <br>
         <select name="eheater" id="eheater" >
             <option value="Yes">Ja</option>
