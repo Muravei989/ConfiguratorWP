@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
+
 @Controller
 public class FormController {
 
@@ -20,9 +23,9 @@ public class FormController {
     public String initialPage() {return "form-page";}
 
     @PostMapping("/submit")
-    public String handleForm(@ModelAttribute("formData") FormData formData, ModelMap model) {
+    public String handleForm(@ModelAttribute("formData") FormData formData, ModelMap model) throws URISyntaxException, IOException {
         String offerLink = doc.generateOffer(formData);
-        model.addAttribute("fileLink", offerLink);
+        model.addAttribute("fileName", offerLink);
         return "result";
     }
 }

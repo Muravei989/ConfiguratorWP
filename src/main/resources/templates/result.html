@@ -8,6 +8,6 @@
 RESULT OFFER:
 <br>
 
-<a th:href="${fileLink}"></a>
+<a th:href="@{/download/file?fileName={fileName}(fileName=${fileName})}" >link to file</a>
 </body>
 </html>

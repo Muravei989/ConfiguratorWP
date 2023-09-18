@@ -1,0 +1,2 @@
+Heizlast = {{t1}}
+Geben Sie die Entfernung von der Anlage bis zum Eingang des Technikraums an = {{t2}}
