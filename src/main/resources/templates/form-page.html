@@ -11,14 +11,14 @@
     <div class="heatLoadBox">
         <label for="heatLoad">Heizlast (Wenn Sie den Wert nicht kennen, geben Sie 0 ein)</label>
         <br>
-        <input type="number" name="heatLoad" id="heatLoad" min="0" max="50">
+        <input type="number" name="heatLoad" id="heatLoad" min="0" max="50" onchange="heatLoadToggle()">
         <hr>
     </div>
 
     <div class="distancetoboardBox" >
         <label for="distancetoboard">"Geben Sie die Entfernung von der Anlage bis zum Eingang des Technikraums an</label>
         <br>
-        <input type="number" name="distancetoboard" id="distancetoboard" min="4" max="15">
+        <input type="number" name="distancetoboard" id="distancetoboard" min="4" max="15" >
         <hr>
     </div>
 
@@ -152,16 +152,16 @@
         <hr>
     </div>
 
-    <div class="heatload8Box hidden">
+    <div class="heatload8Box hidden" id = "heatload8Box">
         <label for="heatload8">Wählen Sie eine Konfiguration</label>
         <br>
-        <select name="heatload8" id="heatload8" >
+        <select name="heatload8" id="heatload8">
             <option value="Aero MONO VA 8 kW">Aero MONO VA 8 kW</option>
         </select>
         <hr>
     </div>
 
-    <div class="heatload910Box hidden">
+    <div class="heatload910Box hidden" id = "heatload910Box">
         <label for="heatload910">Wählen Sie eine Konfiguration</label>
         <br>
         <select name="heatload910" id="heatload910" >
