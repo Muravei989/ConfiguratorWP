@@ -1,3 +1,7 @@
+let currentState;
+
+document.addEventListener('DOMContentLoaded', function() {
+
 class State {
     name = "";
     inputs = [];
@@ -35,7 +39,7 @@ let hl11State = new State("heatload11", ["heatload11Box"]);
 
 let states = [hl8State, hl910State];
 
-let currentState = hl8State;
+currentState = hl8State;
 
 
 function hideInput(id) {
@@ -75,3 +79,4 @@ function heatload8BoxToggle() {
 }
 
 document.getElementById("heatload8Box").addEventListener('change', heatload8BoxToggle())
+});

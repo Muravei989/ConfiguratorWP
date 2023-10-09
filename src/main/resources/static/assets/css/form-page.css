@@ -1,13 +1,13 @@
-html,body{overflow-y: scroll; }
-body
-{background: gold;
+html,body {
+    overflow-y: scroll; 
+}
+body {
+    background: gold;
     border: 10px solid #ffdd26;
     background: none repeat scroll 0 0 #FFFFFF;
-    /* закругляем углы */
     -webkit-border-radius:8px;
     -moz-border-radius:8px;
     border-radius:8px;
-    /* добавляем тени для блока*/
     -webkit-box-shadow: 0 0 5px #CCCCCC, 1px 1px 0 #FFFFFF inset, -1px -1px 0 #FFFFFF inset, 0 0 15px #DDDDDD inset;
     -moz-box-shadow: 0 0 5px #CCCCCC, 1px 1px 0 #FFFFFF inset, -1px -1px 0 #FFFFFF inset, 0 0 15px #DDDDDD inset;
     box-shadow: 0 0 5px #CCCCCC, 1px 1px 0 #FFFFFF inset, -1px -1px 0 #FFFFFF inset, 0 0 15px #DDDDDD inset;
@@ -17,14 +17,10 @@ body
     padding-left: 10px;
     padding-right: 30px;
     text-align: left;
-    /* устанавливаем необходимую ширину формы в зависимости от дизайна
-     ** форма отлично растягивается */
     width: 100%;
     max-width: 600px;
 }
-
-
-button{
+button {
     background: gold;
     color: gold;
     font-size: 18px;
@@ -35,11 +31,9 @@ button{
     cursor: pointer;
     outline: none;
 }
-
-button:hover
-{background: #dcd9d9
+button:hover {
+    background: #dcd9d9
 }
-
-.hidden{
+.hidden {
     display: none;
 }
