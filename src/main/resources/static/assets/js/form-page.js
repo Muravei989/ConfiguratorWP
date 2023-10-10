@@ -33,7 +33,7 @@ class State {
     }
 }
 
-let hl8State = new State("heatload8", ["heatload8Box", "checkplaceBox", "newplaceBox hidden", "distanceBox hidden", "newdistanceBox hidden", "acousticBox hidden", "newplaceVABox hidden", "radtempBox hidden", "reconstradtempBox hidden", "surfencradtempBox hidden","pipeLenghtBox hidden" ]);
+let hl8State = new State("heatload8", ["heatload8Box", "checkplaceBox", "newplaceBox", "distanceBox", "newdistanceBox", "acousticBox", "newplaceVABox", "radtempBox", "reconstradtempBox", "surfencradtempBox","pipeLenghtBox" ]);
 let hl910State = new State("heatload910", ["heatload910Box", "checkplaceBox", "newplaceBox hidden", "distanceBox hidden", ]);
 let hl11State = new State("heatload11", ["heatload11Box"]);
 
