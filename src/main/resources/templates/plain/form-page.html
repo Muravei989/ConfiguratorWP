@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../../static/assets/css/form-page.css" />
+</head>
+<body>
+<form action="/submit" method="post">
+    <div class="heatLoadBox">
+        <label for="heatLoad">Heizlast (Wenn Sie den Wert nicht kennen, geben Sie 0 ein)</label>
+        <br>
+        <input type="number" name="heatLoad" id="heatLoad" min="0" max="50">
+        <hr>
+    </div>
+    
+    <div class="heatload8Box hidden" id = "heatload8Box">
+        <label for="heatload8">Wählen Sie eine Konfiguration</label>
+        <br>
+        <select name="heatload8" id="heatload8">
+            <option value="t"></option>
+            <option value="Aero MONO VA 8 kW">Aero MONO VA 8 kW</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="checkplaceBox hidden" id="checkplaceBox">
+        <label for="checkplace">Hat der gewählte Aufstellort genügend Abstand zu Fenster, Türen und Lichtschächten?</label>
+        <br>
+        <select name="checkplace" id="checkplace" >
+            <option value="t"></option>
+            <option value="Yes">Ja</option>
+            <option value="No">Nein</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="distancetoboardBox hidden" >
+        <label for="distancetoboard">"Geben Sie die Entfernung von der Anlage bis zum Eingang des Technikraums an</label>
+        <br>
+        <input type="number" name="distancetoboard" id="distancetoboard" min="4" max="15" >
+        <hr>
+    </div>
+
+    <div class="eheaterBox hidden">
+        <label for="eheater">Kann die Heizlast in Verbindung mit einem E-Heizstab abgedeckt werden (max. Untdeckung der WP 30%)?</label>
+        <br>
+        <select name="eheater" id="eheater" >
+            <option value="t"></option>
+            <option value="Yes">Ja</option>
+            <option value="No">Nein</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="calcposBox hidden">
+        <label for="calcpos">Kann eine Heizlastung durchgeführt werden?</label>
+        <br>
+        <select name="calcpos" id="calcpos" >
+            <option value="Yes">Ja</option>
+            <option value="No">Nein</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="newplaceBox hidden">
+        <label for="newplace">Es muss ein neuer Aufstelloert gefunden werden, der die Anforderungen an den Abstand einhält. Konnte ein geeigneter Aufstellort gefunden werden?</label>
+        <br>
+        <select name="newplace" id="newplace" >
+            <option value="t"></option>
+            <option value="Yes">Ja</option>
+            <option value="No">Nein</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="distanceBox hidden">
+        <label for="distance">Hat der gewählte Aufstellort eine Entfernung zum Heizungsraum von max. 15 Metern?</label>
+        <br>
+        <select name="distance" id="distance" >
+            <option value="t"></option>
+            <option value="Yes">Ja</option>
+            <option value="No">Nein</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="newdistanceBox hidden">
+        <label for="newdistance">Kann ein neuer Aufstellort gewählt werden, der die Auforderung bezüglich der Entfernung von max. 15 Metern einhält?</label>
+        <br>
+        <select name="newdistance" id="newdistance" >
+            <option value="t"></option>
+            <option value="Yes">Ja</option>
+            <option value="No">Nein</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="VBoptionBox hidden">
+        <label for="VBoption">Kann eine Wärmepumpe aus der VB-Baureihe eingesetzt werden?</label>
+        <br>
+        <select name="VBoption" id="VBoption" >
+            <option value="Yes">Ja</option>
+            <option value="No">Nein</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="acousticBox hidden">
+        <label for="acoustic">Hält der gewählte Aufstellort die akustischen Anforderungen bezogen auf den nächsten Nachbarn ein?</label>
+        <br>
+        <select name="acoustic" id="acoustic" >
+            <option value="t"></option>
+            <option value="Yes">Ja</option>
+            <option value="No">Nein</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="newplaceVABox hidden">
+        <label for="newplaceVA">Kann ein neue Austellort Einhaltung der akustischen Anforderungen unter Einhaltung der Abstandsregel Entferning max. 15 Meter und im Falle einer VA-Baureihe abstände zu Fernstem, Türen und Lichtschächten gefunden werden?</label>
+        <br>
+        <select name="newplaceVA" id="newplaceVA" >
+            <option value="t"></option>
+            <option value="Yes">Ja</option>
+            <option value="No">Nein</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="radtempBox hidden">
+        <label for="radtemp">Liegt die notwendige Auslegungs- Heizungvorlauftemperature unter 50°?</label>
+        <br>
+        <select name="radtemp" id="radtemp" >
+            <option value="t"></option>
+            <option value="Yes">Ja</option>
+            <option value="No">Nein</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="reconstradtempBox hidden">
+        <label for="reconstradtemp">Kann durch Sanierungsmaßnahmen an der Gebäudehülle die notwendige Auslegungs-Heizungsvorluhttemperaute unter 50° gebracht werden?</label>
+        <br>
+        <select name="reconstradtemp" id="reconstradtemp" >
+            <option value="t"></option>
+            <option value="Yes">Ja</option>
+            <option value="No">Nein</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="surfencradtempBox hidden">
+        <label for="surfencradtemp">Können die Heizflächen vergrößert werden und dadurch die notwendige Auslegungs-Heizungvorlaufttemperatur unter 50° gebracht werden?</label>
+        <br>
+        <select name="surfencradtemp" id="surfencradtemp" >
+            <option value="t"></option>
+            <option value="Yes">Ja</option>
+            <option value="No">Nein</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="woodcauldronBox hidden">
+        <label for="woodcauldron">Gibt es noch einen Scheitholz der mit der Wärmepumpe kombniert werden kann?</label>
+        <br>
+        <select name="woodcauldron" id="woodcauldron" >
+            <option value="t"></option>
+            <option value="Yes">Ja</option>
+            <option value="No">Nein</option>
+        </select>
+        <hr>
+    </div>
+
+
+    <div class="heatload910Box hidden" id = "heatload910Box">
+        <label for="heatload910">Wählen Sie eine Konfiguration</label>
+        <br>
+        <select name="heatload910" id="heatload910" >
+            <option value="t"></option>
+            <option value="VA8EH">Aero MONO VA 8 kW mit E-Heizstab</option>
+            <option value="VB11WWB">Aero MONO VB 11 kW mit Warmwasserbereitung</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="heatload11Box hidden">
+        <label for="heatload11">Wählen Sie eine Konfiguration</label>
+        <br>
+        <select name="heatload11" id="heatload11" >
+            <option value="t"></option>
+            <option value="VB11">Aero MONO VB 11 kW</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="heatload12Boxja hidden">
+        <label for="heatload12ja">Wählen Sie eine Konfiguration</label>
+        <br>
+        <select name="heatload12ja" id="heatload12ja" >
+            <option value="t"></option>
+            <option value="VB11EH">Aero MONO VB 11 kW mit E-Heizstab</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="heatload12Boxne hidden">
+        <label for="heatload12ne">Wählen Sie eine Konfiguration</label>
+        <br>
+        <select name="heatload12ne" id="heatload12ne" >
+            <option value="t"></option>
+            <option value="VB13WWB">Aero MONO VA 13 kW mit Warmwasserbereitung</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="heatload13Box hidden">
+        <label for="heatload13">Wählen Sie eine Konfiguration?</label>
+        <br>
+        <select name="heatload13" id="heatload13" >
+            <option value="t"></option>
+            <option value="VB13">Aero MONO VA 13 kW</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="heatload14Boxja hidden">
+        <label for="heatload14ja">Wählen Sie eine Konfiguration</label>
+        <br>
+        <select name="heatload14ja" id="heatload14ja" >
+            <option value="t"></option>
+            <option value="VB13EH">Aero MONO VB 13 kW mit E-Heizstab</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="heatload14Boxne hidden">
+        <label for="heatload14ne">Wählen Sie eine Konfiguration</label>
+        <br>
+        <select name="heatload14ne" id="heatload14ne" >
+            <option value="t"></option>
+            <option value="VB15WWB">Aero MONO VA 15 kW mit Warmwasserbereitung</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="heatload15Box hidden">
+        <label for="heatload15">Wählen Sie eine Konfiguration?</label>
+        <br>
+        <select name="heatload15" id="heatload15" >
+            <option value="t"></option>
+            <option value="VB15">Aero MONO VA 15 kW</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="heatload16Box hidden">
+        <label for="heatload16">Wählen Sie eine Konfiguration</label>
+        <br>
+        <select name="heatload16" id="heatload16" >
+            <option value="t"></option>
+            <option value="VB16">Aero MONO VB 16 kW</option>
+            <option value="VB15EH">Aero MONO VA 15 kW mit E-Heizstab</option>
+        </select>
+        <hr>
+    </div>
+
+
+    <div class="heatload1725Box hidden">
+        <label for="heatload1725">Wählen Sie eine Konfiguration</label>
+        <br>
+        <select name="heatload1725" id="heatload1725" >
+            <option value="t"></option>
+            <option value="VB16EH">Aero MONO VB 16 kW mit E-Heizstab</option>
+            <option value="VB15EH">Aero MONO VA 15 kW mit E-Heizstab</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="heatload2650Box hidden">
+        <label for="heatload1725">Wählen Sie eine Konfiguration</label>
+        <br>
+        <select name="heatload2650" id="heatload2650" >
+            <option value="t"></option>
+            <option value="VB16EH">Aero MONO VB 16 kW mit E-Heizstab</option>
+            <option value="VB15EH">Aero MONO VA 15 kW mit E-Heizstab</option>
+        </select>
+        <hr>
+    </div>
+    <button type="submit">SUBMIT</button>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/assets/js/form-page.js" defer></script>
+</body>
+</html>
