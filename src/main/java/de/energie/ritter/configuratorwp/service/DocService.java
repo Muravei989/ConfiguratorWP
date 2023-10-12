@@ -6,5 +6,5 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 
 public interface DocService {
-    String generateOffer(FormData formData) throws URISyntaxException, IOException;
+    String generateOffer(FormData formData) throws IOException;
 }

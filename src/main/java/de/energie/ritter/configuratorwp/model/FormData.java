@@ -1,10 +1,12 @@
 package de.energie.ritter.configuratorwp.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class FormData{
     private int heatLoad;
     private int distancetoboard;
